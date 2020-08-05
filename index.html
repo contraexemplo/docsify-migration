@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Collective Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Documentation for Open Collective">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+  <!-- Fetch latest version, keep our documentation up to date -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Tabs plugin, renders tabbed conten from Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- Edit on GitHub button -->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Open Collective Docs',
+      loadSidebar: true,
+      themeColor: '#97b7f3', // Based on Open Collective's website
+      search: 'auto',
+      search: {
+        maxAge: 86400000, // Expiration time
+        paths: [],
+        placeholder: 'Type to search'
+      },
+      noData: 'No Results!',
+      depth: 6,
+      hideOtherSidebarContent: false,
+      plugins: [
+      EditOnGithubPlugin.create('https://github.com/opencollective/documentation/blob/v2/', undefined, 'Edit on GitHub')
+      ]
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- Emoji rendering -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- Full text search script -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
